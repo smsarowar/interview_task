@@ -212,7 +212,14 @@ onMounted(() => {
                 <CustomerWorldMap :data="customerMapData" />
 
                 <div class="rounded-lg bg-white p-6 shadow">
-                    <h2 class="mb-4 text-lg font-semibold">Recent Orders</h2>
+                    <div class="flex justify-between items-center">
+                        <h2 class="mb-4 text-lg font-semibold">Recent Orders</h2>
+                        <div class="flex gap-4 ">
+                            <button class=" p-3 border-2 rounded-md">Filter</button>
+                            <button class=" p-3 border-2 rounded-md">See All</button>
+                        </div>
+                    </div>
+
                     <table class="w-full text-left">
                         <thead class="border-b text-sm text-gray-500">
                             <tr>

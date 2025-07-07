@@ -15,11 +15,6 @@ const mainNavItems: NavItem[] = [
         icon: LayoutGrid,
     },
     {
-        title: 'new menue',
-        href: '',
-        icon: LayoutGrid,
-    },
-    {
         title: 'Reports',
         icon: Folder,
         children: [ // submenu
