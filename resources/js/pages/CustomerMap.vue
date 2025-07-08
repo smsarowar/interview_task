@@ -47,17 +47,7 @@ watch(
                 trigger: 'item',
                 formatter: '{b}: {c} Customers'
             },
-            visualMap: {
-                min: 0,
-                max: Math.max(...props.data.map(d => d.value)) || 100,
-                left: 'left',
-                bottom: '10',
-                text: ['High', 'Low'],
-                inRange: {
-                    color: ['#d1fae5', '#10b981']
-                },
-                calculable: true
-            },
+            
             series: [
                 {
                     name: 'Customers',

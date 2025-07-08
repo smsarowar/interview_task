@@ -317,29 +317,6 @@ onMounted(() => {
                         </div>
                     </div>
 
-<!--                    <table class="w-full text-left">-->
-<!--                        <thead class="border-b text-sm text-gray-500">-->
-<!--                            <tr>-->
-<!--                                <th class="py-2">Order ID</th>-->
-<!--                                <th class="py-2">Customer</th>-->
-<!--                                <th class="py-2">Amount</th>-->
-<!--                                <th class="py-2">Status</th>-->
-<!--                            </tr>-->
-<!--                        </thead>-->
-<!--                        <tbody>-->
-<!--                            <tr v-for="order in orders" :key="order.id" class="border-b text-sm">-->
-<!--                                <td class="py-2">#{{ order.id }}</td>-->
-<!--                                <td class="py-2">{{ order.customer }}</td>-->
-<!--                                <td class="py-2">৳{{ order.amount }}</td>-->
-<!--                                <td class="py-2">-->
-<!--                                    <span :class="statusColor(order.status)" class="px-2 py-1 text-xs font-semibold">-->
-<!--                                        {{ order.status }}-->
-<!--                                    </span>-->
-<!--                                </td>-->
-<!--                            </tr>-->
-<!--                        </tbody>-->
-<!--                    </table>-->
-
                     <table class="w-full text-left mt-5">
                         <thead class="border-b text-sm text-gray-500">
                         <tr>
