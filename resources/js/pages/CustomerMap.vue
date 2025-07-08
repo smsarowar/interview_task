@@ -76,7 +76,7 @@ watch(
 
 <template>
     <div class="bg-white p-6 rounded-lg shadow">
-        <h2 class="text-lg font-semibold mb-4">Customer Demographics (World Map)</h2>
-        <v-chart class="h-[500px] w-full" :option="chartOptions" autoresize />
+<!--        <h2 class="text-lg font-semibold mb-4">Customer Demographics (World Map)</h2>-->
+        <v-chart class=" " :option="chartOptions" autoresize />
     </div>
 </template>

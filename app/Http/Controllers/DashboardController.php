@@ -9,9 +9,23 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        // Controller থেকে ডাইনামিক ডেটা
+
         $breadcrumbs = [
             ['title' => 'Dashboard', 'href' => '/dashboard'],
+        ];
+        $customerCountryData = [
+            [
+            'country'=> 'Bangladesh',
+            'customers'=> 2500,
+            'percentage'=> 60,
+            'flag'=> 'assets/image/flag/bn.webp',
+            ],
+            [
+                'country'=> 'USA',
+                'customers'=> 4000,
+                'percentage'=> 80,
+                'flag'=> 'assets/image/flag/usa.webp',
+            ]
         ];
 
         $customerMapData = [
@@ -30,15 +44,19 @@ class DashboardController extends Controller
             ['id' => 1002, 'customer' => 'Ahmad Gato', 'amount' => 3000, 'status' => 'Pending'],
             ['id' => 1003, 'customer' => 'Johan Mizzak', 'amount' => 2200, 'status' => 'Delivered'],
             ['id' => 1004, 'customer' => 'John Cattar', 'amount' => 300, 'status' => 'Delivered'],
+            ['id' => 1001, 'customer' => 'Rahim Ali', 'amount' => 5200, 'status' => 'Shipped'],
+            ['id' => 1002, 'customer' => 'Ahmad Gato', 'amount' => 3000, 'status' => 'Pending'],
+            ['id' => 1003, 'customer' => 'Johan Mizzak', 'amount' => 2200, 'status' => 'Delivered'],
+            ['id' => 1004, 'customer' => 'John Cattar', 'amount' => 300, 'status' => 'Delivered'],
         ];
 
         $chartsData = [
             'gauge' => [82, 18],
-            'monthlySales' => [10000, 14000, 17000, 9000, 22000, 19000, 24000,10000, 14000, 17000, 9000, 22000, 19000, 24000],
+            'monthlySales' => [200, 400,600,700,200, 400,600,650,200, 400,600,800 ],
             'statistics' => [
                 'labels' => ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','aug','sep','oct','nov','dec'],
-                'sales' => [2000, 1800, 2400, 3000, 3200, 2900,2000, 1800, 2400, 3000, 3200, 2900],
-                'revenue' => [2500, 2000, 2600, 3500, 4000, 3100,2500, 2000, 2600, 3500, 4000, 3100],
+                'sales' => [ 400, 420, 400,430 ,390, 410, 430, 380,420,390, 400,450],
+                'revenue' => [600, 630, 590, 610, 580, 610, 570, 600, 590, 650,610, 600],
             ],
             'demographics' => [120, 90, 60, 30, 15],
         ];
@@ -48,15 +66,16 @@ class DashboardController extends Controller
         return Inertia::render('Dashboard', [
             'breadcrumbs' => $breadcrumbs,
             'customerMapData' => $customerMapData,
+            'customerCountryData' => $customerCountryData,
             'orders' => $orders,
             'chartsData' => $chartsData,
             'customers'=>100000,
             'customerper'=>100,
             'totalorder'=>82000,
             'orderper'=>82,
-            'target'=>100000,
-            'today'=>3200,
-            'revenue'=>82000
+            'target'=>20,
+            'today'=>1.5,
+            'revenue'=>16
         ]);
     }
 }

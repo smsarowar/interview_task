@@ -15,7 +15,7 @@ defineProps<{
                 <div class="flex flex-col items-center gap-4">
                     <Link :href="route('home')" class="flex flex-col items-center gap-2 font-medium">
 <!--                        <div class="mb-1 flex h-9 w-20 items-center justify-center rounded-md">-->
-                            <img src="assets/image/logo.png" alt="" class="w-[200px]">
+                            <img src="assets/image/logo.ico" alt="" class="w-[200px]">
 <!--                            <AppLogoIcon class="size-9 fill-current text-[var(&#45;&#45;foreground)] dark:text-white" />-->
 <!--                        </div>-->
 <!--                        <span class="sr-only">{{ title }}</span>-->

@@ -6,6 +6,7 @@ import AppLogo from '@/components/AppLogo.vue';
 import { Link } from '@inertiajs/vue3';
 import NavUser from '@/components/NavUser.vue';
 import { ref, onMounted } from 'vue';
+import New_navbar from '@/components/ui/new_navbar.vue';
 
 withDefaults(
     defineProps<{
@@ -47,11 +48,22 @@ function toggleDark() {
             </template>
 
             <!-- Search (only on md and above) -->
-            <div class="ml-4 w-full max-w-xs hidden md:block">
+            <div class="ml-4 w-full max-w-xs hidden md:block relative">
+                <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+                    </svg>
+                </span>
+
                 <input
                     type="text"
-                    placeholder="Search..."
-                    class="w-full rounded-md border border-gray-300 px-3 py-1.5 text-sm focus:border-blue-500 focus:ring focus:ring-blue-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:focus:border-blue-400"
+                    placeholder="Search for type command"
+                    class="w-full pl-10 rounded-md border border-gray-300 px-3 py-1.5 text-sm
+               focus:border-blue-500 focus:ring focus:ring-blue-200
+               dark:bg-gray-800 dark:text-white dark:border-gray-600
+               dark:focus:border-blue-400"
                 />
             </div>
 
@@ -64,27 +76,9 @@ function toggleDark() {
         </div>
 
         <!-- Right Section: Notification + DarkMode + User -->
-        <div class="flex items-center gap-4">
-            <!-- Notification -->
-            <button class="relative focus:outline-none">
-                <svg
-                    class="w-6 h-6 text-gray-600 dark:text-gray-300"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                    />
-                </svg>
-                <span class="absolute -top-1 -right-1 h-4 w-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">3</span>
-            </button>
-
+        <div class="flex items-center gap-6">
             <!-- Dark Mode Toggle -->
-            <button @click="toggleDark" class="focus:outline-none">
+            <button @click="toggleDark" class="focus:outline-none ">
                 <svg
                     v-if="isDark"
                     class="w-6 h-6 text-gray-300"
@@ -114,9 +108,27 @@ function toggleDark() {
                     />
                 </svg>
             </button>
+            <!-- Notification -->
+            <button class="relative focus:outline-none ">
+                <svg
+                    class="w-6 h-6 text-gray-600 dark:text-gray-300"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                    />
+                </svg>
+                <span class="absolute -top-1 -right-1 h-4 w-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">3</span>
+            </button>
+
 
             <!-- User Avatar + Dropdown -->
-            <NavUser />
+            <new_navbar></new_navbar>
         </div>
     </header>
 </template>

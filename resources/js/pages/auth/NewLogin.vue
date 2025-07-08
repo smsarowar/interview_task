@@ -32,7 +32,7 @@ const submit = () => {
         <div class="flex flex-col md:flex-row bg-white mx-auto w-5xl p-10 gap-6 rounded-2xl shadow-2xl ">
             <div class="w-full md:w-1/2 bg-[#E2ECFF] flex justify-center items-center rounded-md">
                 <div class="flex flex-col justify-center items-center p-10 text-center">
-                    <img src="./images/download.jpeg" alt="logo" class="w-20 h-20 rounded-xl">
+<!--                    <img src="./images/download.jpeg" alt="logo" class="w-20 h-20 rounded-xl">-->
                     <h1 class="text-2xl font-bold">Let us help you run your own platform</h1>
                     <p class="text-sm text-gray-600">Our registration process is quicker than other edtech platform</p>
                 </div>
